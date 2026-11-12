@@ -1,0 +1,135 @@
+.footer {
+  background-color: var(--accent-primary);
+  color: white;
+  padding-top: var(--spacing-xl);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logoIcon {
+  color: var(--accent-secondary);
+}
+
+.description {
+  color: #cbd5e1; /* Light slate */
+  line-height: 1.6;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: var(--transition-smooth);
+}
+
+.socials a:hover {
+  background-color: var(--accent-secondary);
+  transform: translateY(-2px);
+}
+
+.linksColumn h3 {
+  color: white;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.linksColumn ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linksColumn a {
+  color: #cbd5e1;
+  transition: var(--transition-smooth);
+}
+
+.linksColumn a:hover {
+  color: var(--accent-secondary);
+}
+
+.newsletter h3 {
+  color: white;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter p {
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  outline: none;
+}
+
+.form input::placeholder {
+  color: #94a3b8;
+}
+
+.form button {
+  background-color: var(--accent-secondary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+
+.form button:hover {
+  background-color: #1d4ed8;
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.875rem;
+}

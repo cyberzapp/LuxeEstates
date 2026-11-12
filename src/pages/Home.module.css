@@ -1,0 +1,251 @@
+.home {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  padding-top: 80px; /* Offset for fixed navbar */
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.heroBackground img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 50%, rgba(15, 23, 42, 0.1) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  color: white;
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: white;
+  letter-spacing: -1px;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+}
+
+/* Search Bar (Glassmorphism) */
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .searchBar {
+    flex-direction: row;
+    align-items: center;
+    border-radius: 9999px;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    max-width: fit-content;
+  }
+}
+
+.searchInputGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.searchInputGroup label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.searchInputGroup input,
+.searchInputGroup select {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+}
+
+.searchInputGroup input::placeholder {
+  color: var(--text-secondary);
+}
+
+.searchDivider {
+  display: none;
+  width: 1px;
+  height: 40px;
+  background-color: var(--border-light);
+  margin: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .searchDivider {
+    display: block;
+  }
+}
+
+.searchBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--accent-secondary);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.searchBtn:hover {
+  background-color: #1d4ed8; /* Darker blue */
+  transform: scale(1.02);
+}
+
+/* Featured Section */
+.featuredSection {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--spacing-lg);
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+.viewAllLink {
+  color: var(--accent-secondary);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.viewAllLink:hover {
+  text-decoration: underline;
+}
+
+.propertyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .propertyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .propertyGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Value Section */
+.valueSection {
+  background-color: var(--bg-primary);
+  padding: var(--spacing-xl) 0;
+  border-top: 1px solid var(--border-light);
+}
+
+.valueGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .valueGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.valueContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.valueContent p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.valueList {
+  list-style: none;
+}
+
+.valueList li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.valueList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-secondary);
+  font-weight: bold;
+}
+
+.roundedImage {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+}
